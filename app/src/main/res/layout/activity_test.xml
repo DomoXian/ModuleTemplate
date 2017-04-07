@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:text="测试成功"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/error"
+            android:layout_width="match_parent"
+            android:text="测试错误"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:text="测试空"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:text="测试对话框"
+            android:layout_height="wrap_content"/>
+</LinearLayout>

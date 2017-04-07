@@ -1,0 +1,29 @@
+--多渠道打包
+./gradlew assembleRelease --configure-on-demand --daemon --offline --profile
+－－线上包
+./gradlew assembleRelease --configure-on-demand --daemon --offline --profile
+./gradlew installRelease --configure-on-demand --daemon --offline --profile
+－－debug包(平时开发,如果你的开发手机是5.0以下的,请使用提交测试的debug包来跑)
+./gradlew assembleDebug --configure-on-demand --daemon --offline --profile
+./gradlew installDebug --configure-on-demand --daemon --offline --profile
+－－debug包(提交测试)-
+./gradlew assembleDebug --configure-on-demand --daemon --offline --profile
+./gradlew installDebug --configure-on-demand --daemon --offline --profile
+
+--dry-run --profile  --configure-on-demand
+
+adb install -r app/build/outputs/apk/mhc_v5.10.1-DEBUG_debug.apk
+open app/build/outputs/apk
+
+./gradlew build --dependencies
+android-resource-remover
+
+
+sudo vim ~/.bash_profile
+source ~/.bash_profile
+
+
+//以build 命令为例子，可以执行如下的构建命令加快构建速度。 -x :app:test 和 -x :app:lint 是不执行test任务和lint的任务。
+//可以通过如下命令看该build总共包含了哪些任务。
+./gradlew :app:build --dry-run
+./gradlew :app:build --daemon --parallel --max-workers=8 --configure-on-demand --offline -x :app:test -x :app:lint
