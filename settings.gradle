@@ -1,1 +1,2 @@
-include ':app', ':lib_rpc'
+include ':app', ':lib_base'
+include ':lib_rpc'
