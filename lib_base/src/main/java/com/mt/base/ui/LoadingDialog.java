@@ -1,4 +1,4 @@
-package com.mt.base.view;
+package com.mt.base.ui;
 
 import android.content.Context;
 import android.os.Bundle;

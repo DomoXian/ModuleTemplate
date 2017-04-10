@@ -1,4 +1,4 @@
-package com.mt.base.view;
+package com.mt.base.ui;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -17,7 +17,7 @@ import io.reactivex.disposables.CompositeDisposable;
  * Created by xianguo on 6/4/17.
  * 异步调用的activity 基类
  */
-
+@SuppressWarnings("unused")
 public abstract class BaseAsyncActivity extends BaseActivity implements AsyncLoadListener {
 
     protected CompositeDisposable mDisposables = new CompositeDisposable();

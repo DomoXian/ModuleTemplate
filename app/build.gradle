@@ -12,7 +12,6 @@ android {
         targetSdkVersion config.targetSdkVersion
         versionCode config.versionCode
         versionName config.versionName
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
                 cppFlags ""
@@ -40,8 +39,5 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':lib_base')
-    compile libs.supportV7
-    compile libs.rxJava2
-    compile libs.rxAndroid2
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
 }

@@ -1,4 +1,4 @@
-package com.mt.base.view;
+package com.mt.base.ui;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -7,13 +7,14 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.mt.base.helper.ActivityStack;
+import com.mt.base.helper.ActivityStackHelper;
 
 /**
  * Created by xianguo on 6/4/17.
  * activity 基类
  */
 
+@SuppressWarnings("unused")
 public class BaseActivity extends AppCompatActivity {
 
     protected boolean mIsHide;
@@ -21,7 +22,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityStack.push(this);
+        ActivityStackHelper.push(this);
     }
 
     @Override
@@ -33,7 +34,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ActivityStack.pop(this);
+        ActivityStackHelper.pop(this);
         mIsHide = true;
     }
 

@@ -14,7 +14,8 @@ import com.mt.base.BaseApplication;
  * Created by xianguo on 6/4/17.
  * activity栈
  */
-public class ActivityStack {
+@SuppressWarnings("unused")
+public class ActivityStackHelper {
 
     static LinkedList<Activity> mActivityList = new LinkedList<>();
 
@@ -37,9 +38,7 @@ public class ActivityStack {
 
     public static void finishAllActivity() {
         if (mActivityList != null) {
-            for (Activity activity : mActivityList) {
-                activity.finish();
-            }
+            mActivityList.forEach(Activity::finish);
         }
     }
 
@@ -58,7 +57,6 @@ public class ActivityStack {
         LinkedList<Activity> activities = getActivityList();
         for (int i = 0; i < activities.size(); i++) {
             if (activities.get(i).isFinishing()) {
-                continue;
             } else {
                 aliveNum++;
             }
