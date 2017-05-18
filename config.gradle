@@ -1,7 +1,11 @@
+def supportVersion = "25.0.1"
+def retrofitVersion = "2.2.0"
+def rxVersion = "2.0.1"
+
 ext {
     android = [
             compileSdkVersion: 25,
-            buildToolsVersion: "25.0.1",
+            buildToolsVersion: supportVersion,
             minSdkVersion    : 16,
             targetSdkVersion : 25,
             versionCode      : 1010000,
@@ -9,11 +13,12 @@ ext {
     ]
 
     dependencies = [
-            supportV7    : 'com.android.support:appcompat-v7:25.0.1',
-            rxJava2      : 'io.reactivex.rxjava2:rxandroid:2.0.1',
-            rxAndroid2   : 'io.reactivex.rxjava2:rxjava:2.0.1',
-            retrofit     : 'com.squareup.retrofit2:retrofit:2.2.0',
-            rxAdapter    : 'com.squareup.retrofit2:adapter-rxjava2:2.2.0',
-            gsonConverter: 'com.squareup.retrofit2:converter-gson:2.2.0'
+            supportV7    : "com.android.support:appcompat-v7:${supportVersion}",
+            recyclerView : "com.android.support:recyclerview-v7:${supportVersion}",
+            rxJava2      : "io.reactivex.rxjava2:rxandroid:${rxVersion}",
+            rxAndroid2   : "io.reactivex.rxjava2:rxjava:${rxVersion}",
+            retrofit     : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            rxAdapter    : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+            gsonConverter: "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
     ]
 }

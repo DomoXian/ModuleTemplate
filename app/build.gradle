@@ -34,10 +34,15 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':lib_base')
+    debugCompile project(path: ':lib_base', configuration: 'debug')
+    releaseCompile project(path: ':lib_base', configuration: 'release')
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
 }

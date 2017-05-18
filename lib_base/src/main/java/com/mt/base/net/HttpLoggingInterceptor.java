@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.mt.base.provider;
+package com.mt.base.net;
 
 import com.mt.base.utils.LogUtil;
 

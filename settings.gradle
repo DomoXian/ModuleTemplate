@@ -1,3 +1,4 @@
 include ':app'
 include ':lib_rpc'
 include 'lib_base'
+include 'lib_view'

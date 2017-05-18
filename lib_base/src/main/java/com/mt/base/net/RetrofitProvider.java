@@ -1,4 +1,4 @@
-package com.mt.base.provider;
+package com.mt.base.net;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
@@ -22,7 +22,7 @@ public class RetrofitProvider {
     public static Retrofit DefaultRetrofit() {
         if (mRetrofit == null) {
             mRetrofit = new Retrofit.Builder()
-                    .baseUrl("test.com")
+                    .baseUrl("https://www.tngou.net")
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(ClientProvider.getClient())

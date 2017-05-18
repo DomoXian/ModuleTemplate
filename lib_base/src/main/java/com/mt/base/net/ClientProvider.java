@@ -1,4 +1,4 @@
-package com.mt.base.provider;
+package com.mt.base.net;
 
 import com.mt.base.BuildConfig;
 
@@ -27,7 +27,6 @@ public class ClientProvider {
             httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
             SINGLETON = new OkHttpClient
                     .Builder()
-                    .certificatePinner(getCertificate())
                     //日志打印拦截工具
                     .addInterceptor(httpLoggingInterceptor)
                     //超时设置
@@ -40,6 +39,10 @@ public class ClientProvider {
         return SINGLETON;
     }
 
+    /**
+     * 提供证书教养
+     */
+    @SuppressWarnings("unused")
     public static CertificatePinner getCertificate() {
         // 证书绑定
         CertificatePinner certificatePinner;

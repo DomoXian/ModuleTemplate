@@ -1,4 +1,4 @@
-package com.mt.base.provider;
+package com.mt.base.net;
 
 /**
  * Created by xianguo on 10/4/17.

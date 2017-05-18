@@ -142,4 +142,6 @@ public abstract class BaseAsyncActivity extends BaseActivity implements AsyncLoa
             mLoadingView.setVisibility(View.GONE);
         }
     }
+
+
 }
